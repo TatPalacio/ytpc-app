@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "fc028bd7-f8be-423c-b7e2-9a46198c67eb",
+		"name": "venko clinica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43739071",
+		"_collection_link": "https://felixasela.postman.co/workspace/Felix-Asela's-Workspace~990dbd0d-1238-405e-88a2-8d078fd76f7c/collection/43739071-fc028bd7-f8be-423c-b7e2-9a46198c67eb?action=share&source=collection_link&creator=43739071"
+	},
+	"item": [
+		{
+			"name": "médicos",
+			"item": [
+				{
+					"name": "crear médico",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NTU4ODk2NTYsImlzcyI6ImludGVycHJldGUgZGUgZG9jdW1lbnRvcyIsInN1YiI6InllbmtvIiwiYXVkIjoid3d3LnZlbmtvLmNvIiwiZXhwIjoxNzU1ODk2ODU2LCJpcHAiOiIqLiouKi45In0.ehpXvEbiP_f8HTaARpFUWrp3tSGCAeUmraqTtetLZ7fgOJv-xF7--VbfR8SIzLgKGYMtLbcCriHD5vrTW-5WLQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoDocumento\": \"CC\",\r\n    \"numeroDocumento\": \"1098666\",\r\n    \"primerNombre\":\"Gregorio\",\r\n    \"primerApellido\": \"Casas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.137.160.186:5000/clinica/api/medico",
+							"protocol": "http",
+							"host": [
+								"3",
+								"137",
+								"160",
+								"186"
+							],
+							"port": "5000",
+							"path": [
+								"clinica",
+								"api",
+								"medico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar medico",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NTU4ODk2NTYsImlzcyI6ImludGVycHJldGUgZGUgZG9jdW1lbnRvcyIsInN1YiI6InllbmtvIiwiYXVkIjoid3d3LnZlbmtvLmNvIiwiZXhwIjoxNzU1ODk2ODU2LCJpcHAiOiIqLiouKi45In0.ehpXvEbiP_f8HTaARpFUWrp3tSGCAeUmraqTtetLZ7fgOJv-xF7--VbfR8SIzLgKGYMtLbcCriHD5vrTW-5WLQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoDocumento\": \"CC\",\r\n    \"numeroDocumento\": \"1098666\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.137.160.186:5000/clinica/api/medico",
+							"protocol": "http",
+							"host": [
+								"3",
+								"137",
+								"160",
+								"186"
+							],
+							"port": "5000",
+							"path": [
+								"clinica",
+								"api",
+								"medico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar medico",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NTU4ODk2NTYsImlzcyI6ImludGVycHJldGUgZGUgZG9jdW1lbnRvcyIsInN1YiI6InllbmtvIiwiYXVkIjoid3d3LnZlbmtvLmNvIiwiZXhwIjoxNzU1ODk2ODU2LCJpcHAiOiIqLiouKi45In0.ehpXvEbiP_f8HTaARpFUWrp3tSGCAeUmraqTtetLZ7fgOJv-xF7--VbfR8SIzLgKGYMtLbcCriHD5vrTW-5WLQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoDocumento\": \"CC\",\r\n    \"numeroDocumento\": \"1098666\",\r\n    \"primerNombre\": \"Gregorio\",\r\n    \"primerApellido\": \"Casas\",\r\n    \"segundoNombre\": \"segundo\",\r\n    \"segundoApellido\": \"perez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.137.160.186:5000/clinica/api/medico",
+							"protocol": "http",
+							"host": [
+								"3",
+								"137",
+								"160",
+								"186"
+							],
+							"port": "5000",
+							"path": [
+								"clinica",
+								"api",
+								"medico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar medicos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NTU4ODk2NTYsImlzcyI6ImludGVycHJldGUgZGUgZG9jdW1lbnRvcyIsInN1YiI6InllbmtvIiwiYXVkIjoid3d3LnZlbmtvLmNvIiwiZXhwIjoxNzU1ODk2ODU2LCJpcHAiOiIqLiouKi45In0.ehpXvEbiP_f8HTaARpFUWrp3tSGCAeUmraqTtetLZ7fgOJv-xF7--VbfR8SIzLgKGYMtLbcCriHD5vrTW-5WLQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.137.160.186:5000/clinica/api/medico",
+							"protocol": "http",
+							"host": [
+								"3",
+								"137",
+								"160",
+								"186"
+							],
+							"port": "5000",
+							"path": [
+								"clinica",
+								"api",
+								"medico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver medico",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3NTU4ODk2NTYsImlzcyI6ImludGVycHJldGUgZGUgZG9jdW1lbnRvcyIsInN1YiI6InllbmtvIiwiYXVkIjoid3d3LnZlbmtvLmNvIiwiZXhwIjoxNzU1ODk2ODU2LCJpcHAiOiIqLiouKi45In0.ehpXvEbiP_f8HTaARpFUWrp3tSGCAeUmraqTtetLZ7fgOJv-xF7--VbfR8SIzLgKGYMtLbcCriHD5vrTW-5WLQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://3.137.160.186:5000/clinica/api/medico/CC/1098666",
+							"protocol": "http",
+							"host": [
+								"3",
+								"137",
+								"160",
+								"186"
+							],
+							"port": "5000",
+							"path": [
+								"clinica",
+								"api",
+								"medico",
+								"CC",
+								"1098666"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "autenticar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "yenko",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "jk$2034#",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://3.142.35.195:5000/clinica/api/authenticate",
+					"protocol": "http",
+					"host": [
+						"3",
+						"142",
+						"35",
+						"195"
+					],
+					"port": "5000",
+					"path": [
+						"clinica",
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

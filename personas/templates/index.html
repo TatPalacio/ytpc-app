@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Inicio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-600">🏥 Clinica</h1>
+    <div class="flex items-center gap-4">
+      <a href="{% url 'login' %}" 
+         class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition">
+        Iniciar sesión
+      </a>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="flex-1 flex items-center justify-center px-6 py-12">
+    <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-3xl text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">
+        Bienvenido a <span class="text-blue-600">Clinica</span> 👋
+      </h2>
+      <p class="text-gray-600 mb-6">
+        Gestiona usuarios, consulta reportes y administra tu información fácilmente.
+      </p>
+
+      <!-- Botones de acceso rápido -->
+      <div class="flex flex-wrap gap-4 justify-center mb-8">
+        <a href="/home/" class="px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition">Ir a Home</a>
+        <a href="/login/" class="px-6 py-3 bg-green-600 text-white rounded-xl shadow hover:bg-green-700 transition">Iniciar Sesión</a>
+        <a href="/api/personas/" class="px-6 py-3 bg-purple-600 text-white rounded-xl shadow hover:bg-purple-700 transition">Ver API Personas</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-gray-600 text-center py-4">
+    © clinica
+  </footer>
+
+</body>
+</html>
